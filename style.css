@@ -1,0 +1,890 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --clr-grey-lightest: #c5c6d0;
+  --clr-blue-primary: #0e0ae9;
+  --clr-blue-background: #222c40;
+  --clr-dull-white: rgb(192, 185, 185);
+}
+
+.hide {
+  display: none;
+}
+
+.display {
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10000;
+}
+
+.login_create_account {
+  min-height: 100vh;
+  background: linear-gradient(
+      to bottom right,
+      #613f70,
+      #222c40,
+      #222c40,
+      #222c40,
+      #43634a
+    )
+    no-repeat;
+}
+
+.section_center {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h2 {
+  color: white;
+  margin: 1rem 0;
+}
+
+p {
+  color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+  color: var(--clr-blue-primary);
+}
+
+.language {
+  margin: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+}
+
+.logo {
+  background: white;
+  margin: 3.4rem auto;
+  display: flex;
+  justify-content: center;
+  width: 4rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.logo img {
+  width: 110%;
+  height: 110%;
+}
+
+.span_form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+input {
+  margin-bottom: 1rem;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border: 1px solid whitesmoke;
+  border-radius: 12px;
+}
+input::placeholder {
+  color: whitesmoke;
+  text-transform: capitalize;
+}
+
+.password_toggle_eye {
+  position: absolute;
+  top: 47%;
+  left: 90%;
+}
+
+.btn_submit {
+  height: 2.7rem;
+  width: 100%;
+  color: white;
+  border: none;
+  background: var(--clr-blue-primary);
+  background: #0a4ee2;
+  border-radius: 55px;
+  -webkit-border-radius: 55px;
+  -moz-border-radius: 55px;
+  -ms-border-radius: 55px;
+  -o-border-radius: 55px;
+}
+
+.forgot_password {
+  margin-top: 0.9rem;
+  text-align: center;
+}
+
+.forgot_password a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn_trans {
+  display: flex;
+  margin-top: 7rem;
+  height: 2.7rem;
+  color: var(--clr-blue-primary);
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--clr-blue-primary);
+  border-radius: 55px;
+  -webkit-border-radius: 55px;
+  -moz-border-radius: 55px;
+  -ms-border-radius: 55px;
+  -o-border-radius: 55px;
+}
+
+.icon_text {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 1rem 0;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.icon_text p {
+  margin-left: 0.3rem;
+  text-transform: capitalize;
+}
+
+/*  
+******************** 
+ Create account
+*******************
+ */
+
+.arrow_left {
+  margin-top: 1rem;
+  color: white;
+}
+.arrow_left:hover {
+  cursor: pointer;
+}
+
+.get_started h2 {
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+
+.img_warm_cont {
+  overflow: hidden;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.get_started p {
+  color: white;
+  margin: 1rem 0;
+}
+
+.btn_get_started {
+  width: 100%;
+}
+
+.have_an_account {
+  margin-top: 0.5rem;
+}
+
+/*  
+******************** 
+ Find account
+*******************
+ */
+
+.find_your_account {
+  color: white;
+}
+
+.find_your_account h2 {
+  margin: 1rem 0;
+}
+
+.find_your_account p {
+  margin-bottom: 2rem;
+}
+
+.the_number_form input {
+  margin-bottom: 0.5rem;
+}
+
+.instead {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/*  
+******************** 
+ Name
+*******************
+ */
+
+.input_name_section p {
+  color: white;
+  margin: 0 0 1.5rem 0;
+}
+
+.btn_next {
+  margin-top: 0.5rem;
+}
+
+/*  
+******************** 
+ Birthday
+*******************
+ */
+
+.input_birthday_section p {
+  margin-bottom: 2rem;
+  color: whitesmoke;
+}
+.input_birthday_section a {
+  text-decoration: none;
+  color: var(--clr-blue-primary);
+}
+
+/*  
+******************** 
+ Gender
+*******************
+ */
+
+.select_gender_form {
+  margin-top: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.select_gender_form * {
+  padding: 0.6rem 0.6rem;
+  color: var(--clr-dull-white);
+  display: flex;
+  justify-content: space-between;
+}
+
+.select_gender_form label {
+  font-weight: 600;
+}
+
+.select_gender_form input {
+  appearance: none;
+  background: transparent;
+  color: transparent;
+  width: 5%;
+  height: 10%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.select_more {
+  flex-direction: column;
+}
+
+.already_have_account {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: var(--clr-blue-primary);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.gender_section .btn_next {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+/*  
+******************** 
+ Number
+*******************
+ */
+
+.number_section .the_number_form {
+  margin-top: 1rem;
+}
+
+.Sign_up_with {
+  margin-top: 1rem;
+}
+
+/*  
+******************** 
+ Email
+*******************
+ */
+
+.email_section .the_email_form {
+  margin-top: 1rem;
+}
+
+/*  
+******************** 
+ Password
+*******************
+ */
+.password_section .the_email_form {
+  margin-top: 1rem;
+}
+
+.password_section .password_toggle_eye {
+  top: 15%;
+}
+
+/*  
+******************** 
+ Password
+*******************
+ */
+.btn_save {
+  margin-top: 1rem;
+}
+
+/*  
+******************** 
+******************** 
+******************** 
+ LOGGED IN ALREADY
+*******************
+*******************
+*******************
+ */
+
+@font-face {
+  font-family: facebook;
+  src: url(./facebook-letter-faces/FACEBOLF.OTF);
+}
+.facebook_page p,
+h2 {
+  color: black;
+}
+
+.facebook_page {
+  /* background: white; */
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  font-size: 1.3rem;
+}
+
+header h2 {
+  color: var(--clr-blue-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: facebook; */
+  /* font-weight: 800; */
+}
+
+header .icons {
+  align-self: center;
+}
+
+header i {
+  /* background: grey; */
+  text-align: center;
+  margin-left: 0.4rem;
+  padding: 0.4rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.padding {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+nav {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--clr-grey-lightest);
+}
+
+nav i {
+  text-align: center;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.make_a_post {
+  padding: 0.5rem 1.3rem;
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
+  /* place-items: center; */
+  align-items: center;
+}
+
+.profile_img_container {
+  overflow: hidden;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid var(--clr-grey-lightest);
+  border-radius: 50%;
+  transform: translateX(-20%);
+}
+
+.input_post {
+  justify-self: center;
+  margin-right: 5rem;
+  width: 80%;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--clr-grey-lightest);
+  border-radius: 20px;
+  transform: translateX(10%);
+}
+
+.input_photo {
+  color: rgb(19, 170, 19);
+  text-align: center;
+  justify-self: center;
+}
+
+.divider {
+  width: 100vw;
+  height: 4px;
+  background: var(--clr-grey-lightest);
+}
+
+.stories_section {
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  scrollbar-width: 0;
+}
+
+.story {
+  position: relative;
+  height: 10rem;
+  width: 18vw;
+  scrollbar-width: none;
+  border: 1px solid var(--clr-grey-lightest);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.story p {
+  width: 100%;
+  position: absolute;
+  bottom: 2%;
+  text-align: center;
+}
+
+.create_story {
+  background: red;
+  overflow: hidden;
+}
+
+.create_story img {
+  height: 70%;
+  transform: translateX(-11%);
+  -webkit-transform: translateX(-11%);
+  -moz-transform: translateX(-11%);
+  -ms-transform: translateX(-11%);
+  -o-transform: translateX(-11%);
+}
+
+.sub {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: var(--clr-grey-lightest);
+  height: 30%;
+}
+
+.create_story i {
+  z-index: 10;
+  color: var(--clr-blue-primary);
+  font-size: 1.6rem;
+  border: 3px solid var(--clr-grey-lightest);
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fit {
+  object-fit: cover;
+  width: 20%;
+  height: 90%;
+  margin: auto 0;
+}
+.others_story {
+  background: url(./imgs/CA_7.jpg) center/cover;
+}
+
+article {
+  position: relative;
+  max-width: 100vw;
+}
+.head {
+  display: flex;
+  padding: 1rem;
+}
+.head h3 {
+  text-transform: capitalize;
+}
+.yes {
+  color: red;
+  margin: 0 0 1.5rem 0;
+}
+
+.head h4 {
+  color: var(--clr-blue-primary);
+  text-transform: capitalize;
+  margin-left: 5%;
+}
+.posts_icons {
+  gap: 1rem;
+  display: flex;
+  position: absolute;
+  top: 3%;
+  left: 87%;
+  font-size: 1.4rem;
+}
+
+.post_media_container {
+  overflow: hidden;
+  width: 100%;
+  height: 60vh;
+  background: green;
+  background: center/cover;
+}
+
+.post_media_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post_footer {
+  /* background: red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.post_footer .icons {
+  display: flex;
+  gap: 2rem;
+}
+.post_footer i {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.post_footer .icons p {
+  font-size: 0.8rem;
+  align-self: center;
+}
+
+.profile_sub {
+  position: relative;
+}
+
+.profile p {
+  color: black;
+}
+
+.profile_nav {
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile_nav h2 {
+  text-transform: capitalize;
+}
+
+.profile_nav i {
+  padding: 10px;
+  background: var(--clr-grey-lightest);
+  border-radius: 50%;
+}
+
+.imgp {
+  width: 100vw;
+  height: 17rem;
+  background: var(--clr-grey-lightest);
+  z-index: 10;
+}
+
+.pf_img {
+  width: 10rem;
+  height: 10rem;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("./imgs/profile_pic.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 5px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: 27%;
+  left: 1rem;
+}
+
+.hshit {
+  margin-top: 5rem;
+  padding-left: 1rem;
+  text-transform: capitalize;
+}
+
+.blocks {
+  padding: 1rem;
+  display: flex;
+  /* justify-content: space-evenly; */
+}
+
+.blocks div {
+  display: flex;
+  margin-left: 8px;
+  padding: 8px 1rem;
+  border-radius: 5px;
+}
+
+.blocks div p {
+  margin-left: 8px;
+}
+
+.add_story {
+  color: white;
+  background: var(--clr-blue-primary);
+}
+.add_story p {
+  color: white;
+}
+
+.edit_profile {
+  background: var(--clr-grey-lightest);
+}
+
+.blocks .ellipsis {
+  background: var(--clr-grey-lightest);
+}
+
+.large_divi {
+  height: 10px;
+}
+
+.posts {
+  display: flex;
+  text-transform: capitalize;
+}
+
+.posts p {
+  padding: 1rem;
+}
+
+.small_divi {
+  height: 1px;
+}
+
+.inner_section h4 {
+  text-transform: capitalize;
+  padding: 1rem;
+}
+
+.see_about_info {
+  display: flex;
+  padding-left: 1rem;
+  gap: 1rem;
+}
+
+.friends,
+.post_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+
+.inner_section .input_post {
+  border: none;
+  padding: 1rem 0;
+  width: 10rem;
+}
+
+.inner_section .make_a_post {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.inner_section .cola {
+  display: flex;
+}
+
+.unness {
+  display: flex;
+  background: rgb(241, 237, 237);
+}
+
+.unness div {
+  margin: 8px;
+  display: flex;
+  padding: 7px 12px;
+  justify-content: space-between;
+  background: white;
+  text-transform: capitalize;
+  border: 1px solid rgb(202, 199, 199);
+  border-radius: 20px;
+}
+
+.unness div i {
+  color: red;
+  margin-right: 8px;
+}
+
+.making_post {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  width: 75vw;
+  height: 60vw;
+  background: rgb(226, 223, 223);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+}
+
+.making_post .head {
+  justify-content: space-between;
+  text-transform: capitalize;
+  height: 20%;
+}
+.making_post h4 {
+  color: black;
+  margin: 0;
+}
+.making_post i {
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.first_one {
+  display: flex;
+  gap: 5px;
+  margin: 0 auto;
+  width: 95%;
+  height: 25%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.second_one {
+  display: flex;
+  flex-direction: row;
+  height: 60%;
+}
+#text_for_post {
+  height: 80%;
+  width: 60%;
+  display: flex;
+  align-self: flex-end;
+  margin: 0 0 1rem 7px;
+}
+
+#text_for_post::placeholder {
+  position: absolute;
+  top: 10%;
+  color: black;
+}
+
+.media_for_post {
+  margin: 0 auto;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  gap: 20px;
+  justify-self: right;
+}
+
+.media_for_post div {
+  text-transform: capitalize;
+  padding: 8px;
+  cursor: pointer;
+  border: 2px solid var(--clr-grey-lightest);
+  border-radius: 8px;
+}
+
+/* js files */
+.overlays {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  overflow: hidden;
+
+  transition: all 0.5s;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+.stop-scrolling {
+  height: 100%;
+  /* overflow: hidden; */
+  overflow-y: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.like_icon {
+  font-size: 1.25rem;
+  color: blue;
+}
