@@ -293,7 +293,7 @@ const createAccountFunction = function (usersInfo = {}) {
   cNABtn.addEventListener("click", function (e) {
     e.preventDefault();
 
-    window.location.replace("./index.html");
+    window.location.replace("./main.html");
     console.log(usersInfo);
     const acName = usersInfo.userPhoneNumber;
     // const toRetrieve = acName.name.toUpperCase();
