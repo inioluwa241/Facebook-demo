@@ -57,27 +57,31 @@ console.log(Object.values(localStorage));
 IMPLEMENT LOGIN
 ********************************/
 
+// console.log(usersInfo);
 if (localStorage.length > 0) {
   loginSection.classList.remove("hide");
 
   logInBtn.addEventListener("click", function (e) {
+    // alert("well");
     const numVal = loginInputNumber.value;
     const passwordVal = loginInputPassword.value;
     localStorage.setItem("logedin", JSON.stringify(numVal));
 
     const usersInfoObj = JSON.parse(localStorage.getItem(numVal));
+    console.log(usersInfoObj);
+    console.log(passwordVal == usersInfoObj.userPassword);
+    console.log(numVal == usersInfoObj.userPhoneNumber);
 
     console.log(logInBtn);
     console.log("noooo");
     e.preventDefault();
 
-    console.log(usersInfoObj);
     if (
       numVal == usersInfoObj.userPhoneNumber &&
       passwordVal == usersInfoObj.userPassword
     ) {
       console.log(numVal);
-      window.location.replace("./index.html");
+      window.location.replace("./main.html");
     } else {
       loginInputPassword.style.borderColor = "red";
       loginSection.querySelector("span").style.display = "none";
@@ -90,7 +94,19 @@ if (localStorage.length > 0) {
 
   forgotPassword.addEventListener("click", function (e) {
     e.preventDefault();
-    loginInputPassword.value = usersInfoObj.userPassword;
+    const numVal = loginInputNumber.value;
+    console.log(numVal);
+    // localStorage.setItem("logedin", JSON.stringify(numVal));
+    const usersInfoObj = JSON.parse(localStorage.getItem(numVal));
+    if (loginInputNumber.value && usersInfoObj) {
+      loginInputPassword.value = usersInfoObj.userPassword;
+    }
+    if (!loginInputNumber.value) {
+      alert("Please input your phone number");
+    }
+    if (!usersInfoObj) {
+      alert("Account not found, please ensure you put in a valid phone number");
+    }
   });
 
   createAccountBtn.addEventListener("click", function (e) {
