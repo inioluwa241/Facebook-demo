@@ -133,6 +133,20 @@ IMPLEMENT MAKE A POST
   });
 });
 
+const changeFollowLength = function () {
+  Array.from(document.querySelectorAll("article h4")).forEach((each) => {
+    const rect = each.getBoundingClientRect();
+    const viewPortWidth = window.innerWidth;
+    const followWidth = Number.parseFloat(getComputedStyle(each).width);
+    const position = ((rect.left + followWidth) / viewPortWidth) * 100;
+
+    if (position > 70) {
+      console.log("don pass");
+      each.parentNode.classList.remove("head_text_style");
+    }
+  });
+};
+changeFollowLength();
 // photoToPost.addEventListener
 
 /**********IMPLEMENT MAKE INPUT POST MODAL TO CLEAR***********/
@@ -255,6 +269,7 @@ document.addEventListener("click", function (event) {
     event.target.tagName === "H4"
   ) {
     event.target.innerHTML = "Following";
+    // console.log(getComputedStyle(follow).width);
   }
 });
 

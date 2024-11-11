@@ -26,7 +26,7 @@ const btnc = document.querySelectorAll(".btnc");
 
 const forgotPassword = document.querySelector(".forgot_password");
 const createAccountBtn = document.querySelector(".create_account");
-
+const haveAnAccountArr = Array.from(document.querySelectorAll(".aha"));
 const error = document.createElement("p");
 
 loginSection.classList.add("hide");
@@ -117,6 +117,22 @@ if (localStorage.length > 0) {
   });
 }
 
+Array.from(document.querySelectorAll(".password_toggle_eye")).forEach(
+  (each) => {
+    each.addEventListener("click", function (e) {
+      e.preventDefault();
+      const passwordInput = each.parentElement.querySelector(
+        'input[placeholder="Password!"]'
+      );
+
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        setTimeout(() => (passwordInput.type = "password"), 5000);
+      }
+    });
+  }
+);
+
 const createAccountFunction = function (usersInfo = {}) {
   createAccArray[0].classList.remove("hide");
 
@@ -178,6 +194,7 @@ const createAccountFunction = function (usersInfo = {}) {
   });
 
   // let usersInfoObj = {};
+
   usersInfo = {};
 
   btncarr[1].addEventListener("click", function (e) {
@@ -296,7 +313,18 @@ const createAccountFunction = function (usersInfo = {}) {
       usersInfo.userLastName
     ).querySelector("button");
 
+    const notNowBtn = thing(
+      usersInfo.userFirstName,
+      usersInfo.userLastName
+    ).querySelector(".Sign_up_with");
+
     saveButton.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      toNextPage();
+    });
+
+    notNowBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
       toNextPage();
@@ -332,39 +360,18 @@ const createAccountFunction = function (usersInfo = {}) {
   });
 };
 
+console.log();
+
 // const userInfoObj = {};
 if (localStorage.length === 0) {
   let usersInfoOb = {};
   createAccountFunction(usersInfoOb);
 }
 
-// window.addEventListener("load", function (e) {
-//   console.log(e);
-//   window.postMessage("Hello, Receiver!", "*");
-// });
-
-// console.log(window.location.origin);
-setTimeout(() => {
-  // const data = { action: "sendMethod", payload: "Hello, Receiver!" };
-  const data = { message: "Hello, Receiver!" };
-  window.postMessage("Hello from sender", window.location.origin);
+haveAnAccountArr.forEach((each) => {
+  each.addEventListener("click", function (e) {
+    e.preventDefault();
+    console.log("well it was clicked");
+    loginSection.classList.remove("hide");
+  });
 });
-
-// window.addEventListener("message", function (e) {
-//   console.log(e);
-//   console.log(e.timeStamp);
-//   if (e.origin === window.location.origin && e.source !== window) {
-//     console.log("Received message:", e.data);
-//   }
-// });
-
-// let newWindow = window.open("index.html", "_blank");
-// if (!newWindow) {
-//   alert("Popup blocked! Please allow popups for this site.");
-// }
-
-// SENDER FILE
-// setTimeout(() => {
-//   newWindow.postMessage("Hello from sender", window.location.origin);
-//   console.log("done");
-// }, 5000);

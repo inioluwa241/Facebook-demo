@@ -35,6 +35,7 @@
       #43634a
     )
     no-repeat;
+  user-select: none;
 }
 
 .section_center {
@@ -67,6 +68,7 @@ a {
   background: white;
   margin: 3.4rem auto;
   display: flex;
+  overflow: hidden;
   justify-content: center;
   width: 4rem;
   border-radius: 50%;
@@ -83,11 +85,13 @@ a {
 
 .span_form {
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   position: relative;
 }
 
 input {
+  width: 100%;
   margin-bottom: 1rem;
   background: transparent;
   background: rgba(0, 0, 0, 0.2);
@@ -104,6 +108,7 @@ input::placeholder {
   position: absolute;
   top: 47%;
   left: 90%;
+  overflow: hidden;
 }
 
 .btn_submit {
@@ -132,6 +137,7 @@ input::placeholder {
 
 .btn_trans {
   display: flex;
+  overflow: hidden;
   margin-top: 7rem;
   height: 2.7rem;
   color: var(--clr-blue-primary);
@@ -148,6 +154,7 @@ input::placeholder {
 
 .icon_text {
   display: flex;
+  overflow: hidden;
   justify-content: center;
   margin: 1rem 0 1rem 0;
   color: white;
@@ -167,6 +174,8 @@ input::placeholder {
 
 .arrow_left {
   margin-top: 1rem;
+  font-size: 1.2rem;
+  overflow: hidden;
   color: white;
 }
 .arrow_left:hover {
@@ -277,6 +286,7 @@ input::placeholder {
   padding: 0.6rem 0.6rem;
   color: var(--clr-dull-white);
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
 }
 
@@ -299,9 +309,13 @@ input::placeholder {
 
 .select_more {
   flex-direction: column;
+  overflow: hidden;
 }
 
 .already_have_account {
+  width: 100%;
+  text-wrap: nowrap;
+  text-align: center;
   margin-bottom: 0.5rem;
   text-decoration: none;
   color: var(--clr-blue-primary);
@@ -392,6 +406,7 @@ h2 {
 
 header {
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
   padding: 0 1rem;
   font-size: 1.3rem;
@@ -480,6 +495,7 @@ nav i {
 .stories_section {
   padding: 0.5rem;
   display: flex;
+  overflow: hidden;
   gap: 0.5rem;
   scrollbar-width: 0;
 }
@@ -532,6 +548,7 @@ nav i {
   font-size: 1.6rem;
   border: 3px solid var(--clr-grey-lightest);
   position: absolute;
+  overflow: hidden;
   top: 70%;
   left: 50%;
   border-radius: 50%;
@@ -554,8 +571,14 @@ article {
 }
 .head {
   display: flex;
+  overflow: hidden;
   max-width: 100vw;
   padding: 1rem;
+}
+.head_text_style {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
 }
 .head h3 {
   text-transform: capitalize;
@@ -573,9 +596,10 @@ article {
 .posts_icons {
   gap: 1rem;
   display: flex;
+  overflow: hidden;
   position: absolute;
   top: 3%;
-  left: 85%;
+  left: 83%;
   font-size: 1.4rem;
 }
 
@@ -594,8 +618,8 @@ article {
 }
 
 .post_footer {
-  /* background: red; */
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
   padding: 0.5rem;
 }
@@ -603,15 +627,18 @@ article {
 .post_footer .icons {
   display: flex;
   gap: 2rem;
+  overflow: hidden;
 }
 .post_footer i {
   display: flex;
   gap: 0.5rem;
+  overflow: hidden;
 }
 
 .post_footer .icons p {
   font-size: 0.8rem;
   align-self: center;
+  overflow: hidden;
 }
 
 .profile_sub {
@@ -625,6 +652,7 @@ article {
 .profile_nav {
   padding: 1rem 1rem;
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: space-between;
 }
@@ -673,11 +701,13 @@ article {
 .blocks {
   padding: 1rem;
   display: flex;
+  overflow: hidden;
   /* justify-content: space-evenly; */
 }
 
 .blocks div {
   display: flex;
+  overflow: hidden;
   margin-left: 8px;
   padding: 8px 1rem;
   border-radius: 5px;
@@ -709,6 +739,7 @@ article {
 
 .posts {
   display: flex;
+  overflow: hidden;
   text-transform: capitalize;
 }
 
@@ -727,6 +758,7 @@ article {
 
 .see_about_info {
   display: flex;
+  overflow: hidden;
   padding-left: 1rem;
   gap: 1rem;
 }
@@ -734,6 +766,7 @@ article {
 .friends,
 .post_div {
   display: flex;
+  overflow: hidden;
   align-items: center;
   justify-content: space-between;
   text-transform: capitalize;
@@ -747,22 +780,26 @@ article {
 
 .inner_section .make_a_post {
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
   padding: 0 1rem;
 }
 
 .inner_section .cola {
   display: flex;
+  overflow: hidden;
 }
 
 .unness {
   display: flex;
+  overflow: hidden;
   background: rgb(241, 237, 237);
 }
 
 .unness div {
   margin: 8px;
   display: flex;
+  overflow: hidden;
   padding: 7px 12px;
   justify-content: space-between;
   background: white;
@@ -779,12 +816,13 @@ article {
 .making_post {
   z-index: 100;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   width: 75vw;
   height: 60vw;
   background: rgb(226, 223, 223);
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
@@ -793,37 +831,33 @@ article {
 .making_post .head {
   justify-content: space-between;
   text-transform: capitalize;
-  height: 20%;
+  height: 25%;
 }
 .making_post h4 {
   color: black;
   margin: 0;
+  height: 100%;
+  min-height: 100%;
 }
 .making_post i {
   cursor: pointer;
   font-size: 1.4rem;
+  height: 100%;
+  min-height: 100%;
 }
 
-.first_one {
-  display: flex;
-  gap: 5px;
-  margin: 0 auto;
-  width: 95%;
-  height: 25%;
-  overflow: hidden;
-  border-radius: 10px;
-}
 .second_one {
   display: flex;
-  flex-direction: row;
-  height: 60%;
+  overflow: hidden;
+  flex-direction: column;
+  height: 75%;
 }
 #text_for_post {
-  height: 80%;
-  width: 60%;
+  height: 60%;
+  width: 95%;
   display: flex;
-  align-self: flex-end;
-  margin: 0 0 1rem 7px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 #text_for_post::placeholder {
@@ -833,8 +867,10 @@ article {
 }
 
 .media_for_post {
-  margin: 0 auto;
+  width: 100%;
+  margin: 1rem 0;
   display: flex;
+  overflow: hidden;
   align-self: center;
   flex-direction: column;
   gap: 20px;
@@ -842,11 +878,17 @@ article {
 }
 
 .media_for_post div {
+  display: flex;
+  width: 85%;
+  margin: 0 auto;
   text-transform: capitalize;
-  padding: 8px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
   cursor: pointer;
   border: 2px solid var(--clr-grey-lightest);
-  border-radius: 8px;
+  border-radius: 15px;
 }
 
 /* js files */
