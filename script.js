@@ -149,6 +149,8 @@ const createAccountFunction = function (usersInfo = {}) {
       return el === arr[nxti + 1];
     });
 
+    console.log("well rest");
+
     prevPage = createAccArray.find(function (el, i, arr) {
       const nxti = createAccArray.indexOf(currentPage);
 
@@ -368,10 +370,13 @@ if (localStorage.length === 0) {
   createAccountFunction(usersInfoOb);
 }
 
+let currentPage;
 haveAnAccountArr.forEach((each) => {
   each.addEventListener("click", function (e) {
     e.preventDefault();
     console.log("well it was clicked");
     loginSection.classList.remove("hide");
+    each.parentNode.classList.add("hide");
+    console.log(each.parentNode);
   });
 });
