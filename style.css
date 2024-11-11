@@ -105,6 +105,7 @@ input::placeholder {
 }
 
 .password_toggle_eye {
+  font-size: 1.2rem;
   position: absolute;
   top: 47%;
   left: 90%;
